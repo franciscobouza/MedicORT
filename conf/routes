@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET		/										controllers.Application.index()
+GET     /login									controllers.Application.login()
+POST    /registrar								controllers.Application.registrar()
+GET		/getProfesionales						controllers.Application.getProfesionales()
+GET		/getProfesionalesPorEspecialidad		controllers.Application.getProfesionalesPorEspecialidad()
+GET		/getDetalleProfesional					controllers.Application.getDetalleProfesional()
+GET		/getCentrosMedicos						controllers.Application.getCentrosMedicos()
+POST	/asignarPuntajeAProfesional				controllers.Application.asignarPuntajeAProfesional()
+POST	/fijarConsultaMedica					controllers.Application.fijarConsultaMedica()
+GET		/getHistorialConsultasMedicas			controllers.Application.getHistorialConsultasMedicas()
+GET		/getEspecialidades						controllers.Application.getEspecialidades()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /profesional/*file		controllers.FileService.getFile(file: String)
